@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.row1col1 = new System.Windows.Forms.Label();
             this.row1col2 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
             this.reactionLabel = new System.Windows.Forms.Label();
+            this.lightTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // row1col1
@@ -131,11 +133,11 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.ForeColor = System.Drawing.Color.White;
             this.timeLabel.Location = new System.Drawing.Point(260, 89);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(82, 25);
+            this.timeLabel.Size = new System.Drawing.Size(71, 29);
             this.timeLabel.TabIndex = 10;
             this.timeLabel.Text = "0.000";
             // 
@@ -152,20 +154,25 @@
             // reactionLabel
             // 
             this.reactionLabel.AutoSize = true;
-            this.reactionLabel.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reactionLabel.ForeColor = System.Drawing.Color.White;
             this.reactionLabel.Location = new System.Drawing.Point(260, 49);
             this.reactionLabel.Name = "reactionLabel";
-            this.reactionLabel.Size = new System.Drawing.Size(138, 25);
+            this.reactionLabel.Size = new System.Drawing.Size(114, 29);
             this.reactionLabel.TabIndex = 12;
             this.reactionLabel.Text = "Reaction:";
+            // 
+            // lightTimer
+            // 
+            this.lightTimer.Interval = 400;
+            this.lightTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(426, 429);
+            this.ClientSize = new System.Drawing.Size(677, 429);
             this.Controls.Add(this.reactionLabel);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.timeLabel);
@@ -202,6 +209,7 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Label reactionLabel;
+        private System.Windows.Forms.Timer lightTimer;
     }
 }
 
